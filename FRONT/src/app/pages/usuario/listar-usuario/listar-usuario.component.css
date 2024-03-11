@@ -1,0 +1,35 @@
+table{
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(20px);
+}
+
+th {
+    font-size: 20px;
+}
+
+td {
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'Cursive', cursive;
+}
+
+.alterar {
+    text-decoration: none;
+}
+
+tr:hover td {
+    background-color: transparent;
+    background-color: rgba(58, 55, 55, 0.329)
+}
+
+table.tabela {
+    border-radius: 20px; 
+    overflow: hidden;
+}

@@ -1,0 +1,28 @@
+### Adicionando um novo genero
+
+POST https://localhost:7035/api/genero/cadastrar
+Content-Type: application/json
+
+{
+    "GeneroNome": "Terror"
+}
+
+### listar todos os generos
+GET https://localhost:7035/api/genero/listar
+
+### Buscando um genero pelo NOME
+GET https://localhost:7035/api/genero/buscar/Terror
+
+### Buscando um genero pelo ID
+GET https://localhost:7035/api/genero/buscarID/8
+
+### Alterar um genero pelo ID
+PUT https://localhost:7035/api/genero/alterar/8
+Content-Type: application/json
+
+{
+    "GeneroNome": "Animação"
+}
+
+### Deletar um genero pelo ID
+DELETE https://localhost:7035/api/genero/deletar/6

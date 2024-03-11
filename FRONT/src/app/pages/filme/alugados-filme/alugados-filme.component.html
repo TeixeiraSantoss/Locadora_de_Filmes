@@ -1,0 +1,65 @@
+<h1>Filmes Alugados</h1>
+
+<table mat-table [dataSource]="filmes">
+
+  <ng-container matColumnDef="filmeID">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.filmeID}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="classifIndicativa">
+    <th mat-header-cell *matHeaderCellDef> Classificação </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.classif_ind}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="anoLancamento">
+    <th mat-header-cell *matHeaderCellDef> Lançamento </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.ano_lanc}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="alugado">
+    <th mat-header-cell *matHeaderCellDef> Status </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.alugado? 'Alugado' : 'Disponível'}} </td>
+  </ng-container>
+
+  <!--
+
+  <ng-container matColumnDef="genero">
+    <th mat-header-cell *matHeaderCellDef> Gênero </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.genero?.generoNome}} </td>
+  </ng-container>
+
+  -->
+
+
+
+  <ng-container matColumnDef="devolver">
+    <th mat-header-cell *matHeaderCellDef> Devolver </th>
+    <td mat-cell *matCellDef="let filme">
+      <a mat-button (click)="devolver(filme.filmeID)" class="devolver"> Devolver </a>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="deletar">
+    <th mat-header-cell *matHeaderCellDef> Deletar </th>
+    <td mat-cell *matCellDef="let filme">
+      <a mat-button (click)="deletar(filme.filmeID)" class="deletar">Deletar</a>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="alterar">
+    <th mat-header-cell *matHeaderCellDef> Alterar </th>
+    <td mat-cell *matCellDef="let filme">
+      <a mat-button routerLink="/pages/filme/alterar/{{filme.filmeID}}" class="alterar">Editar</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

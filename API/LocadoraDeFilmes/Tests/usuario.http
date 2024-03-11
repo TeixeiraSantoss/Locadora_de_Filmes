@@ -1,0 +1,28 @@
+### Adicionando um novo Usuario
+
+POST https://localhost:7035/api/usuario/cadastrar
+Content-Type: application/json
+
+{
+    "cpf": 2,
+    "Nome": "Koga",
+    "idade": 121
+}
+
+### listar todos os Usuarios
+GET https://localhost:7035/api/usuario/listar
+
+### Buscando um Usuario pelo CPF
+GET https://localhost:7035/api/usuario/buscar/2
+
+### Alterar um Usuario pelo ID
+PUT https://localhost:7035/api/usuario/alterar/2
+Content-Type: application/json
+
+{
+    "Nome": "eu",
+    "idade": 123
+}
+
+### Deletar um Usuario pelo ID
+DELETE https://localhost:7035/api/Usuario/deletar/1

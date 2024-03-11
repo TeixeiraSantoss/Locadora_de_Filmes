@@ -1,0 +1,59 @@
+
+mat-toolbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    z-index: 10;
+    color: white;
+    position: fixed; 
+    backdrop-filter: blur(20px);
+    top: 0; 
+    left: 0;
+    right: 0;
+}
+
+.top-options {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.89);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+.top:hover .top-options {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.top {
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+.top-options a {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.logo {
+    font-family: 'Cursive', cursive;
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-left: auto;
+    padding: 10px;
+}
+
+    .content {
+    margin-top: 60px;
+}

@@ -1,0 +1,52 @@
+<h1>Lista de Filmes</h1>
+
+<table mat-table [dataSource]="filmes" class="tabela">
+
+  <ng-container matColumnDef="filmeID">
+    <th mat-header-cell *matHeaderCellDef> ID</th>
+    <td mat-cell *matCellDef="let filme"> {{filme.filmeID}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="classif_ind">
+    <th mat-header-cell *matHeaderCellDef> Classificação</th>
+    <td mat-cell *matCellDef="let filme"> {{filme.classif_ind}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ano_lanc">
+    <th mat-header-cell *matHeaderCellDef> Lançamento </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.ano_lanc}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="alugado">
+    <th mat-header-cell *matHeaderCellDef> Status </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.alugado? 'Alugado' : 'Disponível'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="genero">
+    <th mat-header-cell *matHeaderCellDef> Gênero </th>
+    <td mat-cell *matCellDef="let filme"> {{filme.genero? filme.genero.generoNome : ''}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="deletar">
+    <th mat-header-cell *matHeaderCellDef> Apagar</th>
+    <td mat-cell *matCellDef="let filme">
+      <a mat-button (click)="deletar(filme.filmeID)" class="deletar">Deletar</a>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="alterar">
+    <th mat-header-cell *matHeaderCellDef> Alterar</th>
+    <td mat-cell *matCellDef="let filme">
+      <a mat-button routerLink="/pages/filme/alterar/{{filme.filmeID}}" class="alterar">Editar</a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

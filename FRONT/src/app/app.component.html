@@ -1,0 +1,35 @@
+<mat-toolbar> 
+  <span id="filmeTOP" class="top" matTooltip="Opções Filme">
+    Filme
+    <div class="top-options">
+      <a routerLink="pages/filme/cadastrar" class="nav-link">Cadastrar Filme</a>
+      <a routerLink="pages/filme/listar" class="nav-link">Listar Filmes</a>
+      <a routerLink="pages/filme/alugados" class="nav-link"> Filmes Alugados </a>
+      <a routerLink="pages/filme/disponiveis" class="nav-link"> Filmes Disponiveis </a>
+    </div>
+  </span>
+
+  <span id="genero" class="top" matTooltip="Opções Gênero">
+    Gênero
+    <div class="top-options">
+      <a routerLink="pages/genero/cadastrar" class="nav-link">Cadastrar Gênero</a>
+      <a routerLink="pages/genero/listar" class="nav-link">Listar Gêneros</a>
+    </div>
+  </span>
+
+  <span id="usuarioTOP" class="top" matTooltip="Opções Usuário">
+    Usuário
+    <div class="top-options">
+      <a routerLink="pages/usuario/cadastrar" class="nav-link">Cadastrar Usuário</a>
+      <a routerLink="pages/usuario/listar" class="nav-link">Listar Usuários</a>
+    </div>
+  </span>
+  <span class="logo">Locadora de Filmes</span>
+
+</mat-toolbar>
+
+
+<div class="content">
+  <router-outlet>
+  </router-outlet>
+</div>

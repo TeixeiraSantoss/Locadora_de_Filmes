@@ -1,0 +1,18 @@
+<div class="centralizar">
+  <div class="principal">
+    <div *ngIf="filme">
+      <h1>Alugar Filme</h1>
+
+      <p>Filme Selecionado: {{ filme.nome }}</p>
+
+      <mat-form-field>
+        <mat-label>Cpf:</mat-label>
+        <input matInput type="number" [(ngModel)]="cpf" />
+      </mat-form-field>
+
+      <br>
+
+      <button mat-raised-button (click)="alugar()"> Alugar Filme </button>
+    </div>
+  </div>
+</div>

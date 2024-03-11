@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url('img/Fundo.jpg');
+    background-size: cover;
+    height: 80vh;
+} 
+
+a, span, h1, h2, p, label, th, td{
+    color: white;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+

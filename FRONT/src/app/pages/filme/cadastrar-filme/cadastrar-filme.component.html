@@ -1,0 +1,40 @@
+<div class="centralizar">
+  <div class="principal">
+    <h1>Cadastrar Filme</h1>
+
+    <mat-form-field>
+      <mat-label>Nome:</mat-label>
+      <input matInput type="text" [(ngModel)]="nome" />
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <mat-label>Classificação Indicativa:</mat-label>
+      <input matInput type="text" [(ngModel)]="classif_ind" />
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <mat-label>Ano de Lançamento:</mat-label>
+      <input matInput type="number" [(ngModel)]="ano_lanc" />
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <mat-label>Gênero:</mat-label>
+      <mat-select [(ngModel)]="generoID">
+        <mat-option *ngFor="let genero of generos" value="{{ genero.generoID }}">
+          {{ genero.generoNome }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <div>
+      <button mat-raised-button (click)="cadastrar()">Cadastrar Filme</button>
+    </div>
+  </div>
+</div>
